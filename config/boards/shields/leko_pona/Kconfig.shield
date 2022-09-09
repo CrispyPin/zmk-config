@@ -1,0 +1,5 @@
+config SHIELD_LEKO_PONA_LEFT
+    def_bool $(shields_list_contains,leko_pona_left)
+
+config SHIELD_LEKO_PONA_RIGHT
+    def_bool $(shields_list_contains,leko_pona_right)

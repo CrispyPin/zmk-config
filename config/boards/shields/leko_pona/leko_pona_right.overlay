@@ -1,0 +1,5 @@
+#include "leko_pona.dtsi"
+
+&default_transform {
+	col-offset = <18>;
+};

@@ -1,0 +1,13 @@
+file_format: "1"
+id: leko_pona
+name: leko pona
+type: shield
+url: https://github.com/CrispyPin/zmk-config/
+requires: [nice_nano_v2]
+exposes: []
+features:
+  - keys
+siblings:
+  - leko_pona_left
+  - leko_pona_right
+  
