@@ -4,13 +4,12 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-
         default_layer {
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    W    |    E    |    R    |    T    |                    |    Y    |    U    |    I    |    O    |    P    |
-// |    A    |    S    |    D    |    F    |    G    |                    |    H    |    J    |    K    |    L    |    ;    |
-// |  SHIFT  |    X    |    C    |    V    |    B    |                    |    M    |    ,    |    .    |    /    |  R CTRL |
-//                               |   GUI   |   DEL   | RETURN  ||   TAB   |   BSPC  |  R ALT  |
+// --------------------------------------------------------------------------------------------------------------------------
+// |   ESC   |    W    |    F    |    P    |    B    |                    |    J    |    L    |    U    |    Y    |    <-   |
+// |    A    |    R    |    S    |    T    |    G    |                    |    M    |    N    |    E    |    I    |    O    |
+// |  LCTRL  |    X    |    C    |    D    |    V    |                    |    K    |    H    |    Z    |    Q    |   RET   |
+//                               |   LALT  |    L1   |  SPACE  ||  SHIFT  |    L2   |  SUPER  |
             bindings = <
     &kp ESC    &kp W    &kp F    &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp BACKSPACE
     &kp A      &kp R    &kp S    &kp T     &kp G                          &kp M     &kp N     &kp E     &kp I     &kp O

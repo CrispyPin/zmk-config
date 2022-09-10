@@ -9,7 +9,7 @@ config ZMK_USB
 if SHIELD_LEKO_PONA_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "leko pona wan"
+    default "leko pona 1"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
