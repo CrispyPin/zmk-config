@@ -15,7 +15,7 @@
     &kp ESC    &kp W    &kp F    &kp P     &kp B                               &kp J     &kp L     &kp U     &kp Y     &kp BACKSPACE
     &kp A      &kp R    &kp S    &kp T     &kp G                               &kp M     &kp N     &kp E     &kp I     &kp O
     &kp LCTRL  &kp X    &kp C    &kp D     &kp V                               &kp K     &kp H     &kp Z     &kp Q     &kp RET
-                                 &kp LALT  &bt SPACE  &kp BT_CLR    &kp DOT   &kp LSHIFT &kp LWIN
+                                 &kp LALT  &kp SPACE  &bt BT_CLR    &kp DOT   &kp LSHIFT &kp LWIN
             >;
         };
     };
