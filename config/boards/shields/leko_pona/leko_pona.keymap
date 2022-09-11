@@ -6,16 +6,16 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-// --------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    W    |    F    |    P    |    B    |                    |    J    |    L    |    U    |    Y    |    <-   |
-// |    A    |    R    |    S    |    T    |    G    |                    |    M    |    N    |    E    |    I    |    O    |
-// |  LCTRL  |    X    |    C    |    D    |    V    |                    |    K    |    H    |    Z    |    Q    |   RET   |
-//                               |   LALT  |    L1   |  SPACE  ||  SHIFT  |    L2   |  SUPER  |
+
+// |   ESC   |    W    |    F    |    P    |    B    |                        |    J    |    L    |    U    |    Y    |    <-   |
+// |    A    |    R    |    S    |    T    |    G    |                        |    M    |    N    |    E    |    I    |    O    |
+// |  LCTRL  |    X    |    C    |    D    |    V    |                        |    K    |    H    |    Z    |    Q    |   RET   |
+//                               |   LALT  |  SPACE  |    L1   |    |    L2   |  SHIFT  |  SUPER  |
             bindings = <
-    &kp ESC    &kp W    &kp F    &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp BACKSPACE
-    &kp A      &kp R    &kp S    &kp T     &kp G                          &kp M     &kp N     &kp E     &kp I     &kp O
-    &kp LCTRL  &kp X    &kp C    &kp D     &kp V                          &kp K     &kp H     &kp Z     &kp Q     &kp RET
-                                 &kp LALT  &bt BT_CLR  &kp SPACE  &kp LSHIFT &kp DOT   &kp LWIN
+    &kp ESC    &kp W    &kp F    &kp P     &kp B                               &kp J     &kp L     &kp U     &kp Y     &kp BACKSPACE
+    &kp A      &kp R    &kp S    &kp T     &kp G                               &kp M     &kp N     &kp E     &kp I     &kp O
+    &kp LCTRL  &kp X    &kp C    &kp D     &kp V                               &kp K     &kp H     &kp Z     &kp Q     &kp RET
+                                 &kp LALT  &bt SPACE  &kp BT_CLR    &kp DOT   &kp LSHIFT &kp LWIN
             >;
         };
     };
