@@ -8,7 +8,7 @@
 #define L1 1
 #define L2 2
 #define L3 3
-#define L4 3
+#define L4 4
 
 / {
 	behaviors {
