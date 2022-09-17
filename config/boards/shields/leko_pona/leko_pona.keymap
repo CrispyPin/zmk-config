@@ -85,10 +85,10 @@
 		// toki pona
 		l_toki {
 			bindings = <
-&trans	&kp P	&kp W	&kp U	&none						&to L0	&kp E	&kp S	&kp J	&trans
-&kp N	&kp L	&kp I	&kp A	&none						&none	&kp O	&kp T	&kp M	&kp K
-&trans	&none	&none	&none	&none						&none	&none	&none	&none	&none
-						&trans	&trans	&none		&none	&trans	&trans
+&trans	&kp P	&kp W		&kp U		&none						&to L0	&kp E	&kp S	&kp J	&trans
+&kp N	&kp L	&kp I		&kp A		&none						&none	&kp O	&kp T	&kp M	&kp K
+&trans	&none	&kp QMARK	&kp EXCL	&none						&none	&kp DOT	&kp COMMA	&none	&none
+							&trans		&trans	&none		&none	&trans	&trans
 			>;
 		};
 	};
