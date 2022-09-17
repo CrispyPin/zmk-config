@@ -76,7 +76,7 @@
 		// media + bluetooth + future layer toggles
 		layer_3 {
 			bindings = <
-&trans	&none	&none			&none		&to L4						&kp C_BRI_UP	&kp C_PREV	&kp C_NEXT	&kp C_VOL_UP	&trans
+&trans	&none	&none			&none		&tog L4						&kp C_BRI_UP	&kp C_PREV	&kp C_NEXT	&kp C_VOL_UP	&trans
 &none	&none	&none			&none		&none						&kp C_BRI_DN	&kp C_PLAY	&kp C_PAUSE	&kp C_VOL_DN	&none
 &trans	&none	&bt BT_SEL 0	&bt BT_NXT	&bt BT_CLR					&none			&none		&none		&none			&trans
 								&trans		&trans	&trans		&trans	&trans	&trans
