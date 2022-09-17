@@ -48,8 +48,8 @@
 			bindings = <
 &kp ESC		&kp W	&kp F	&kp P		&kp B							&kp J		&kp L	&kp U	&kp Y	&kp BACKSPACE
 &kp A		&kp R	&kp S	&kp T		&kp G							&kp M		&kp N	&kp E	&kp I	&kp O
-&kp LCTRL	&kp X	&kp C	&kp D		&kp V							&kp K		&kp H	&kp Z	&kp Q	&kp LSHFT
-							&kp LALT	&kp SPACE	&mo L1		&mo L2	&kp LWIN	&kp RET
+&kp LCTRL	&kp X	&kp C	&kp D		&kp V							&kp K		&kp H	&kp Z	&kp Q	&kp LALT
+							&kp SPACE	&kp LWIN	&mo L1		&mo L2	&kp LSHIFT	&kp RET
 			>;
 		};
 		// numbers + symbols + non english letters
@@ -58,7 +58,7 @@
 &kp TAB	&none	&none	&none	&none									&none	&none		&none	&none	&kp DEL
 &kp N0	&kp N1	&kp N2	&kp N3	&kp N4									&kp N5	&kp N6		&kp N7	&kp N8	&kp N9
 &trans	&none	&none	&none	&none									&iunder	&iplus		&icomma	&idot	&trans
-						&trans	&trans	&trans					&mo L3	&trans	&kp KP_ENTER
+						&trans	&trans	&trans					&mo L3	&trans	&trans
 			>;
 		};
 		// F keys + navigation
@@ -67,7 +67,7 @@
 &kp F1	&kp F2	&kp F3	&kp F4		&kp F5								&none	&kp HOME	&kp UP		&kp END		&kp PG_UP
 &kp F6	&kp F7	&kp F8	&kp F9		&kp F10								&none	&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN
 &trans	&kp F11	&kp F12	&kp PSCRN	&kp K_CMENU							&none	&none		&none		&none		&trans
-						&trans		&trans		&mo L3			&trans	&trans	&kp KP_ENTER
+						&trans		&trans		&mo L3			&trans	&trans	&trans
 			>;
 		};
 		// media + bluetooth + future layer toggles
