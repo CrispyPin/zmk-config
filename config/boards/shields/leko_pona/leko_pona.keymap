@@ -63,7 +63,7 @@ ZMK_UNICODE_SINGLE(multi_o, A, N6, N6, E) // multiocular o
 		layer_1 {
 			bindings = <
 &kp TAB	&none	&none	&none	&none									&none	&sv_ao	&sv_ae	&sv_oe	&kp DEL
-&kp N0	&kp N1	&kp N2	&kp N3	&kp N4									&kp N5	&kp N6	&kp N7	&kp N8	&kp N9
+&kp N1	&kp N2	&kp N3	&kp N4	&kp N5									&kp N6	&kp N7	&kp N8	&kp N9	&kp N0
 &trans	&none	&none	&none	&none									&iunder	&iminus	&icomma	&idot	&trans
 						&trans	&trans	&trans					&mo L3	&trans	&trans
 			>;
@@ -71,10 +71,10 @@ ZMK_UNICODE_SINGLE(multi_o, A, N6, N6, E) // multiocular o
 		// F keys + navigation
 		layer_2 {
 			bindings = <
-&kp F1	&kp F2	&kp F3	&kp F4		&kp F5								&none	&kp HOME	&kp UP		&kp END		&kp PG_UP
-&kp F6	&kp F7	&kp F8	&kp F9		&kp F10								&none	&kp LEFT	&kp DOWN	&kp RIGHT	&kp PG_DN
-&trans	&kp F11	&kp F12	&kp PSCRN	&kp K_CMENU							&none	&none		&none		&none		&trans
-						&trans		&trans		&mo L3			&trans	&trans	&trans
+&kp F1	&kp F2	&kp F3	&kp F4	&kp F5							&kp PG_UP	&kp HOME	&kp UP		&kp END		&kp PSCRN
+&kp F6	&kp F7	&kp F8	&kp F9	&kp F10							&kp PG_DN	&kp LEFT	&kp DOWN	&kp RIGHT	&kp K_CMENU
+&trans	&kp F11	&kp F12	&kp F13	&kp F14							&none		&none		&none		&none		&trans
+						&trans	&trans	&mo L3			&trans	&trans		&trans
 			>;
 		};
 		// media + bluetooth + future layer toggles
