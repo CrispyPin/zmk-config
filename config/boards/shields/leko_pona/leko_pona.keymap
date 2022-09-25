@@ -10,7 +10,8 @@
 #define L1 1
 #define L2 2
 #define L3 3
-#define L4 4
+#define TOKI 4
+#define GAME 5
 
 ZMK_UNICODE_SINGLE(multi_o, A, N6, N6, E) // multiocular o
 
@@ -80,7 +81,7 @@ ZMK_UNICODE_SINGLE(multi_o, A, N6, N6, E) // multiocular o
 		// media + bluetooth + future layer toggles
 		layer_3 {
 			bindings = <
-&trans	&none	&none			&none		&tog L4						&kp C_BRI_UP	&kp C_PREV	&kp C_NEXT	&kp C_VOL_UP	&trans
+&trans	&none	&none			&tog GAME	&tog TOKI					&kp C_BRI_UP	&kp C_PREV	&kp C_NEXT	&kp C_VOL_UP	&trans
 &none	&none	&none			&none		&none						&kp C_BRI_DN	&kp C_PLAY	&kp C_PAUSE	&kp C_VOL_DN	&multi_o
 &trans	&none	&bt BT_SEL 0	&bt BT_NXT	&bt BT_CLR					&none			&none		&none		&none			&trans
 								&trans		&trans	&trans		&trans	&trans	&trans
@@ -93,6 +94,15 @@ ZMK_UNICODE_SINGLE(multi_o, A, N6, N6, E) // multiocular o
 &kp N	&kp L	&kp I		&kp A		&none						&none	&kp O	&kp T	&kp M	&kp K
 &trans	&none	&kp QMARK	&kp EXCL	&none						&none	&kp DOT	&kp COMMA	&none	&none
 							&trans		&trans	&none		&none	&trans	&trans
+			>;
+		};
+		// game compatibility / half qwerty
+		l_game {
+			bindings = <
+&kp ESC		&kp Q	&kp W	&kp E		&kp R							&none	&none		&kp UP		&none		&kp BSPC
+&kp LSHFT	&kp A	&kp S	&kp D		&kp F							&none	&kp LEFT	&kp DOWN	&kp RIGHT	&none
+&kp LCTRL	&kp Z	&kp X	&kp C		&kp V							&none	&none		&none		&none		&none
+							&kp LALT	&kp SPACE	&to L0		&to L0	&none	&kp RET
 			>;
 		};
 	};
