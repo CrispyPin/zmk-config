@@ -5,20 +5,22 @@ config ZMK_BLE
 config ZMK_USB
 	default y
 
+config CONFIG_ZMK_BATTERY_NRF_VDDH
+	default y
 
 if SHIELD_LEKO_PONA_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "leko pona 1"
+	default "leko pona 1"
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    default y
+	default y
 
 endif
 
 if SHIELD_LEKO_PONA_LEFT || SHIELD_LEKO_PONA_RIGHT
 
 config ZMK_SPLIT
-    default y
+	default y
 
 endif
