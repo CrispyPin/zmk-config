@@ -41,7 +41,7 @@ ZMK_UNICODE_SINGLE(multi_o, A, N6, N6, E) // multiocular o
 			bindings = <
 &kp F1	&kp F2	&kp F3	&kp F4	&kp F5							&kp PG_UP	&kp HOME	&kp UP		&kp END		&kp PSCRN
 &kp F6	&kp F7	&kp F8	&kp F9	&kp F10							&kp PG_DN	&kp LEFT	&kp DOWN	&kp RIGHT	&kp K_CMENU
-&trans	&kp F11	&kp F12	&kp F13	&kp F14							&none		&none		&none		&none		&trans
+&trans	&kp F11	&kp F12	&kp F13	&kp F14							&kp F15		&kp F16		&kp F17		&kp F18		&trans
 						&trans	&mo L3	&trans			&trans	&trans		&trans
 			>;
 		};
