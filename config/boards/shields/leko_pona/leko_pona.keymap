@@ -26,6 +26,7 @@ ZMK_UNICODE_PAIR(win_ae, N0, N0, E, N4, N0, N0, C, N4)
 ZMK_UNICODE_PAIR(win_ao, N0, N0, E, N5, N0, N0, C, N5)
 ZMK_UNICODE_PAIR(win_oe, N0, N0, F, N6, N0, N0, D, N6)
 
+
 #define BASE 0
 #define SYM 1
 #define NAV 2
@@ -43,7 +44,9 @@ ZMK_UNICODE_PAIR(win_oe, N0, N0, F, N6, N0, N0, D, N6)
 			then-layer = <WIN_UNI>;
 		};
 	};
+};
 
+/ {
 	keymap {
 		compatible = "zmk,keymap";
 		l_base {
@@ -85,10 +88,10 @@ ZMK_UNICODE_PAIR(win_oe, N0, N0, F, N6, N0, N0, D, N6)
 		// toki pona
 		l_toki {
 			bindings = <
-&trans	&kp P	&kp W		&kp U		&none						&to BASE	&kp E	&kp S	&kp J	&trans
-&kp N	&kp L	&kp I		&kp A		&none						&none	&kp O	&kp T	&kp M	&kp K
-&trans	&none	&kp QMARK	&kp EXCL	&none						&none	&kp DOT	&kp COMMA	&none	&none
-							&trans		&trans	&none		&none	&trans	&trans
+&trans	&kp P	&kp W		&kp U		&none						&to BASE	&kp E	&kp S		&kp J	&trans
+&kp N	&kp L	&kp I		&kp A		&none						&none		&kp O	&kp T		&kp M	&kp K
+&trans	&none	&kp QMARK	&kp EXCL	&none						&none		&kp DOT	&kp COMMA	&none	&none
+							&trans		&trans	&none		&none	&trans		&trans
 			>;
 		};
 		// game compatibility / half qwerty
