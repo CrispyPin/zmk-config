@@ -9,6 +9,7 @@
 ZMK_UNICODE_PAIR(lin_ae, N0, N0, E, N4, N0, N0, C, N4)
 ZMK_UNICODE_PAIR(lin_ao, N0, N0, E, N5, N0, N0, C, N5)
 ZMK_UNICODE_PAIR(lin_oe, N0, N0, F, N6, N0, N0, D, N6)
+ZMK_UNICODE_PAIR(lin_euro, N2, N0, A, C, N0, N0, B, N0) // euro sign and degree symbol
 ZMK_UNICODE_SINGLE(multi_o, A, N6, N6, E) // multiocular o
 
 // switch to Windows-mode (using WinCompose) for helper script
@@ -20,6 +21,7 @@ ZMK_UNICODE_SINGLE(multi_o, A, N6, N6, E) // multiocular o
 ZMK_UNICODE_PAIR(win_ae, N0, N0, E, N4, N0, N0, C, N4)
 ZMK_UNICODE_PAIR(win_ao, N0, N0, E, N5, N0, N0, C, N5)
 ZMK_UNICODE_PAIR(win_oe, N0, N0, F, N6, N0, N0, D, N6)
+ZMK_UNICODE_PAIR(win_euro, N2, N0, A, C, N0, N0, B, N0) // euro sign and degree symbol
 
 
 
@@ -56,7 +58,7 @@ ZMK_UNICODE_PAIR(win_oe, N0, N0, F, N6, N0, N0, D, N6)
 		// numbers + symbols + non english letters
 		l_sym {
 			bindings = <
-&kp TAB	&kp GRAVE	&kp LBKT	&kp RBKT	&none									&none		&lin_ao		&lin_ae		&lin_oe	&kp DEL
+&kp TAB	&kp GRAVE	&kp LBKT	&kp RBKT	&lin_euro								&none		&lin_ao		&lin_ae		&lin_oe	&kp DEL
 &kp N1	&kp N2		&kp N3		&kp N4		&kp N5									&kp N6		&kp N7		&kp N8		&kp N9	&kp N0
 &trans	&kp SQT		&kp SLASH	&kp BSLH	&kp EQUAL								&kp MINUS	&kp SEMI	&kp COMMA	&kp DOT	&trans
 								&trans		&trans		&trans			&mo META	&trans	&trans
@@ -109,7 +111,7 @@ ZMK_UNICODE_PAIR(win_oe, N0, N0, F, N6, N0, N0, D, N6)
 		};
 		l_win_unicode {
 			bindings = <
-&trans	&trans	&trans	&trans	&trans						&trans	&win_ao	&win_ae	&win_oe	&trans
+&trans	&trans	&trans	&trans	&win_euro					&trans	&win_ao	&win_ae	&win_oe	&trans
 &trans	&trans	&trans	&trans	&trans						&trans	&trans	&trans	&trans	&trans
 &trans	&trans	&trans	&trans	&trans						&trans	&trans	&trans	&trans	&trans
 						&trans	&trans	&trans		&trans	&trans	&trans
