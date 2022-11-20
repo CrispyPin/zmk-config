@@ -57,7 +57,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 &kp ESC		&kp W	&kp F	&kp P		&kp B							&kp J		&kp L	&kp U	&kp Y	&kp BACKSPACE
 &kp A		&kp R	&kp S	&kp T		&kp G							&kp M		&kp N	&kp E	&kp I	&kp O
 &kp LCTRL	&kp X	&kp C	&kp D		&kp V							&kp K		&kp H	&kp Z	&kp Q	&kp LALT
-							&kp SPACE	&mo SYM	&kp LWIN		&mo NAV	&kp LSHIFT	&kp RET
+							&kp SPACE	&kp LSHIFT	&kp LWIN	&mo NAV	&mo SYM	&kp RET
 			>;
 		};
 		// numbers + symbols + non english letters
@@ -106,7 +106,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 							&kp LALT	&kp SPACE	&tog GAME		&tog GAME	&none	&kp RET
 			>;
 		};
-		// dummy layer for enabling windows unicod macros
+		// dummy layer for enabling windows unicode macros
 		l_windows {
 			bindings = <
 &trans	&trans	&trans	&trans	&trans						&trans	&trans	&trans	&trans	&trans
