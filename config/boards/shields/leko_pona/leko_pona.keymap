@@ -64,8 +64,8 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 			label = "esc";
 			#binding-cells = <0>;
 			bindings = <&esctab>, <&kp ESC>;
-			mods = <(MOD_LCTRL)>;
-			keep-mods = <(MOD_LCTRL)>;
+			mods = <(MOD_LCTL)>;
+			keep-mods = <(MOD_LCTL)>;
 		};
 	};
 };
