@@ -51,9 +51,18 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 
 / {
 	behaviors {
+		escape: fancy_esc_key {
+			// activate esc-tab macro if not holding ctrl, this allows ctrl-shift-esc but turns shift-esc into tab
+			compatible = "zmk,behavior-mod-morph";
+			label = "esc";
+			#binding-cells = <0>;
+			bindings = <&esctab>, <&kp ESC>;
+			mods = <(MOD_LCTRL)>;
+			keep-mods = <(MOD_LCTRL)>;
+		};
 		esctab: shift_esc_tab {
 			compatible = "zmk,behavior-mod-morph";
-			label = "esc/tab";
+			label = "";
 			#binding-cells = <0>;
 			bindings = <&kp ESC>, <&kp TAB>;
 			mods = <(MOD_LSFT)>;
@@ -66,7 +75,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		compatible = "zmk,keymap";
 		l_base {
 			bindings = <
-&esctab		&kp W	&kp F	&kp P		&kp B							&kp J		&kp L	&kp U	&kp Y	&kp BACKSPACE
+&escape		&kp W	&kp F	&kp P		&kp B							&kp J		&kp L	&kp U	&kp Y	&kp BACKSPACE
 &kp A		&kp R	&kp S	&kp T		&kp G							&kp M		&kp N	&kp E	&kp I	&kp O
 &kp LCTRL	&kp X	&kp C	&kp D		&kp V							&kp K		&kp H	&kp Z	&kp Q	&kp LALT
 							&kp SPACE	&kp LSHIFT	&kp LWIN	&mo NAV	&mo SYM	&kp RET
