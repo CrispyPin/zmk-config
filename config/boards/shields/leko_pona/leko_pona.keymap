@@ -53,7 +53,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 	behaviors {
 		esctab: shift_esc_tab {
 			compatible = "zmk,behavior-mod-morph";
-			label = "";
+			label = "esc_tab";
 			#binding-cells = <0>;
 			bindings = <&kp ESC>, <&kp TAB>;
 			mods = <(MOD_LSFT)>;
