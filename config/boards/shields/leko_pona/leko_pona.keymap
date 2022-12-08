@@ -75,10 +75,10 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		compatible = "zmk,keymap";
 		l_base {
 			bindings = <
-&escape		&kp W	&kp F	&kp P		&kp B							&kp J		&kp L	&kp U	&kp Y	&kp BACKSPACE
-&kp A		&kp R	&kp S	&kp T		&kp G							&kp M		&kp N	&kp E	&kp I	&kp O
-&kp LCTRL	&kp X	&kp C	&kp D		&kp V							&kp K		&kp H	&kp Z	&kp Q	&kp LALT
-							&kp SPACE	&kp LSHIFT	&kp LWIN	&mo NAV	&mo SYM	&kp RET
+&escape		&kp W	&kp F	&kp P			&kp B							&kp J	&kp L	&kp U	&kp Y	&kp BACKSPACE
+&kp A		&kp R	&kp S	&kp T			&kp G							&kp M	&kp N	&kp E	&kp I	&kp O
+&kp LCTRL	&kp X	&kp C	&kp D			&kp V							&kp K	&kp H	&kp Z	&kp Q	&kp LALT
+							&mt LALT SPACE	&kp LSHIFT	&kp LWIN	&mo NAV	&mo SYM	&kp RET
 			>;
 		};
 		// numbers + symbols + non english letters
@@ -89,7 +89,6 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 &trans	&kp SQT		&kp SLASH	&kp BSLH	&kp EQUAL							&kp MINUS		&kp SEMI	&kp COMMA	&kp DOT	&trans
 								&trans		&trans		&trans			&trans	&trans			&trans
 			>;
-//			 ' "	 / ?		 \ |		 = +									 - _		 ; :		 , <		 . >
 		};
 		// F keys + navigation
 		l_nav {
@@ -106,7 +105,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 &kp C_VOL_DN	&kp C_VOL_UP	&tog WINDOWS	&tog GAME	&tog TOKI					&kp KP_MULTIPLY	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_PLUS
 &kp C_PREV		&kp C_NEXT		&none			&kp C_PLAY	&none						&kp KP_DIVIDE	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp KP_N0
 &trans			&none			&bt BT_SEL 0	&bt BT_NXT	&bt BT_CLR					&kp KP_DOT		&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_MINUS
-								&trans			&trans		&trans				&trans	&trans	&kp KP_ENTER
+								&trans			&trans		&trans				&trans	&trans			&kp KP_ENTER
 			>;
 		};
 		// toki pona
