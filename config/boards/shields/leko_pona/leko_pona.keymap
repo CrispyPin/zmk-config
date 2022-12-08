@@ -67,6 +67,16 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 			mods = <(MOD_LCTL)>;
 			keep-mods = <(MOD_LCTL)>;
 		};
+		gqt: global-quick-tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "GLOBAL_QUICK_TAP";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <125>;
+			global-quick-tap;
+			bindings = <&kp>, <&kp>;
+		};
 	};
 };
 
@@ -78,7 +88,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 &escape		&kp W	&kp F	&kp P			&kp B							&kp J	&kp L	&kp U	&kp Y	&kp BACKSPACE
 &kp A		&kp R	&kp S	&kp T			&kp G							&kp M	&kp N	&kp E	&kp I	&kp O
 &kp LCTRL	&kp X	&kp C	&kp D			&kp V							&kp K	&kp H	&kp Z	&kp Q	&kp LALT
-							&mt LALT SPACE	&kp LSHIFT	&kp LWIN	&mo NAV	&mo SYM	&kp RET
+							&gqt LALT SPACE	&kp LSHIFT	&kp LWIN	&mo NAV	&mo SYM	&kp RET
 			>;
 		};
 		// numbers + symbols + non english letters
