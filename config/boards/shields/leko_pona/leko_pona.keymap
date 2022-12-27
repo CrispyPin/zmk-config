@@ -48,13 +48,21 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 	};
 
 	macros {
-		word_test: word_test {
-		label = "Word_test";
-		compatible = "zmk,behavior-macro";
-		#binding-cells = <0>;
-		wait-ms = <5>;
-		tap-ms = <5>;
-		bindings = <&macro_tap &kp T &kp O &kp K &kp I>;
+		word_test1: word_test1 {
+			label = "Test1";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <5>;
+			tap-ms = <5>;
+			bindings = <&macro_tap &kp T &kp O &kp K &kp I>;
+		};
+		word_test2: word_test2 {
+			label = "Test2";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <5>;
+			tap-ms = <5>;
+			bindings = <&macro_tap &kp P &kp O &kp N &kp A>;
 		};
 	};
 
@@ -63,8 +71,12 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		compatible = "zmk,combos";
 		combo_toki_a {
 			key-positions = <10 11>;
-			bindings = <&word_test>;
-			slow-release;
+			bindings = <&word_test1>;
+			layers = <TOKI>;
+		};
+		combo_toki_b {
+			key-positions = <10 11 12>;
+			bindings = <&word_test2>;
 			layers = <TOKI>;
 		};
 	};
