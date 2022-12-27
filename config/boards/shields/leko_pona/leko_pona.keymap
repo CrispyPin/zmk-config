@@ -25,7 +25,6 @@ ZMK_UNICODE_PAIR(win_euro, N2, N0, A, C, N0, N0, B, N0) // euro sign and degree 
 ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 
 
-
 #define BASE 0
 #define SYM 1
 #define NAV 2
@@ -47,9 +46,17 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 			then-layer = <META>;
 		};
 	};
-};
 
-/ {
+	combos {
+		compatible = "zmk,combos";
+		combo_toki_a {
+			key-positions = <5>;
+			bindings = <&macro_tap &kp SPACE &kp T &kp O &kp K &kp I>;
+			slow-release = true;
+			layers = <TOKI>;
+		};
+	};
+
 	behaviors {
 		esctab: shift_esc_tab {
 			compatible = "zmk,behavior-mod-morph";
@@ -72,15 +79,13 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 			label = "GLOBAL_QUICK_TAP";
 			#binding-cells = <2>;
 			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <125>;
+			tapping-term-ms = <400>;
+			quick-tap-ms = <250>;
 			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
 	};
-};
 
-/ {
 	keymap {
 		compatible = "zmk,keymap";
 		l_base {
@@ -103,10 +108,10 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		// F keys + navigation
 		l_nav {
 			bindings = <
-&kp F1	&kp F2	&kp F3	&kp F4	&kp F5								&kp PG_UP	&kp HOME	&kp UP		&kp END		&kp PSCRN
-&kp F6	&kp F7	&kp F8	&kp F9	&kp F10								&kp PG_DN	&kp LEFT	&kp DOWN	&kp RIGHT	&kp K_CMENU
-&trans	&kp F11	&kp F12	&kp F13	&kp F14								&kp F15		&kp F16		&kp F17		&kp F18		&trans
-						&trans	&trans		&trans			&trans	&trans		&trans
+&kp F1	&kp F2	&kp F3	&kp F4	&kp F5							&kp PG_UP	&kp HOME	&kp UP		&kp END		&kp PSCRN
+&kp F6	&kp F7	&kp F8	&kp F9	&kp F10							&kp PG_DN	&kp LEFT	&kp DOWN	&kp RIGHT	&kp K_CMENU
+&trans	&kp F11	&kp F12	&kp F13	&kp F14							&kp F15		&kp F16		&kp F17		&kp F18		&trans
+						&trans	&trans	&trans			&trans	&trans		&trans
 			>;
 		};
 		// media + bluetooth + layer toggles + numpad
@@ -118,13 +123,13 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 								&trans			&trans		&trans				&trans	&trans			&kp KP_ENTER
 			>;
 		};
-		// toki pona
+		// toki pona steno
 		l_toki {
 			bindings = <
-&trans	&kp P	&kp W		&kp U		&none						&tog TOKI	&kp E	&kp S		&kp J	&trans
-&kp N	&kp L	&kp I		&kp A		&none						&none		&kp O	&kp T		&kp M	&kp K
-&trans	&none	&kp QMARK	&kp EXCL	&none						&none		&kp DOT	&kp COMMA	&none	&none
-							&trans		&none	&trans		&none	&trans		&trans
+&trans	&none	&none	&none		&none							&tog TOKI	&none	&none	&none	&none
+&kp A	&kp A	&kp A	&kp A		&none							&none		&kp A	&kp A	&kp A	&kp A
+&trans	&none	&none	&none		&none							&none		&none	&none	&none	&trans
+						&kp SPACE	&trans	&trans			&none	&none		&trans
 			>;
 		};
 		// game compatibility / half qwerty
@@ -145,6 +150,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 						&trans	&trans	&trans		&trans	&trans	&trans
 			>;
 		};
+		// unicode macros for symbol layer in windows mode
 		l_win_unicode {
 			bindings = <
 &trans	&trans	&trans	&trans	&win_euro					&win_multi_o	&win_ao	&win_ae	&win_oe	&trans
