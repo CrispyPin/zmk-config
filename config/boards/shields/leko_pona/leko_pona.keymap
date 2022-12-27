@@ -63,8 +63,8 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		compatible = "zmk,combos";
 		combo_toki_a {
 			key-positions = <10 11>;
-			bindings = <&macro_tap &kp T &kp O &kp K &kp I>;
-			// slow-release;
+			bindings = <&word_test>;
+			slow-release;
 			layers = <TOKI>;
 		};
 	};
