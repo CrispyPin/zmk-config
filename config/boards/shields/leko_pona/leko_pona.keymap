@@ -97,16 +97,16 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 &kp TAB	&kp GRAVE	&kp LBKT	&kp RBKT	&lin_euro							&lin_multi_o	&lin_ao		&lin_ae		&lin_oe	&kp DEL
 &kp N1	&kp N2		&kp N3		&kp N4		&kp N5								&kp N6			&kp N7		&kp N8		&kp N9	&kp N0
 &trans	&kp SQT		&kp SLASH	&kp BSLH	&kp EQUAL							&kp MINUS		&kp SEMI	&kp COMMA	&kp DOT	&trans
-								&trans		&trans		&trans			&trans	&trans			&trans
+								&kp SPACE	&trans		&trans			&trans	&trans			&trans
 			>;
 		};
 		// F keys + navigation
 		l_nav {
 			bindings = <
-&kp F1	&kp F2	&kp F3	&kp F4	&kp F5								&kp PG_UP	&kp HOME	&kp UP		&kp END		&kp PSCRN
-&kp F6	&kp F7	&kp F8	&kp F9	&kp F10								&kp PG_DN	&kp LEFT	&kp DOWN	&kp RIGHT	&kp K_CMENU
-&trans	&kp F11	&kp F12	&kp F13	&kp F14								&kp F15		&kp F16		&kp F17		&kp F18		&trans
-						&trans	&trans		&trans			&trans	&trans		&trans
+&kp F1	&kp F2	&kp F3	&kp F4		&kp F5								&kp PG_UP	&kp HOME	&kp UP		&kp END		&kp PSCRN
+&kp F6	&kp F7	&kp F8	&kp F9		&kp F10								&kp PG_DN	&kp LEFT	&kp DOWN	&kp RIGHT	&kp K_CMENU
+&trans	&kp F11	&kp F12	&kp F13		&kp F14								&kp F15		&kp F16		&kp F17		&kp F18		&trans
+						&kp SPACE	&trans		&trans			&trans	&trans		&trans
 			>;
 		};
 		// media + bluetooth + layer toggles + numpad
