@@ -17,3 +17,5 @@ include:
     shield: leko_pona_left
   - board: nice_nano_v2
     shield: leko_pona_right
+  - board: nice_nano_v2
+    shield: settings_reset
