@@ -34,6 +34,8 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 #define GAME 5
 #define WINDOWS 6
 #define WIN_UNI 7
+#define LEFT_COMPACT 8
+#define LEFT_COMPACT_KEYS 9
 
 / {
 	conditional_layers {
@@ -112,10 +114,10 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		// media + bluetooth + layer toggles + numpad
 		l_meta {
 			bindings = <
-&kp C_VOL_DN	&kp C_VOL_UP	&tog WINDOWS	&tog GAME	&tog TOKI					&kp KP_MULTIPLY	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_PLUS
-&kp C_PREV		&kp C_NEXT		&none			&kp C_PLAY	&none						&kp KP_DIVIDE	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp KP_N0
-&trans			&none			&bt BT_SEL 0	&bt BT_NXT	&bt BT_CLR					&kp KP_DOT		&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_MINUS
-								&trans			&trans		&trans				&trans	&trans			&kp KP_ENTER
+&kp C_VOL_DN	&kp C_VOL_UP	&tog WINDOWS		&tog GAME	&tog TOKI					&kp KP_MULTIPLY	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_PLUS
+&kp C_PREV		&kp C_NEXT		&tog LEFT_COMPACT	&kp C_PLAY	&none						&kp KP_DIVIDE	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp KP_N0
+&trans			&none			&bt BT_SEL 0		&bt BT_NXT	&bt BT_CLR					&kp KP_DOT		&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_MINUS
+													&trans		&trans		&trans	&trans	&trans			&kp KP_ENTER
 			>;
 		};
 		// toki pona
@@ -151,6 +153,22 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 &trans	&trans	&trans	&trans	&trans						&trans			&trans	&trans	&trans	&trans
 &trans	&trans	&trans	&trans	&trans						&trans			&trans	&trans	&trans	&trans
 						&trans	&trans	&trans		&trans	&trans			&trans
+			>;
+		};
+		l_left_compact {
+			bindings = <
+&trans	&trans	&trans	&trans	&trans									&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans									&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans									&trans	&trans	&trans	&trans	&trans
+						&trans	&trans	&mo LEFT_COMPACT_KEYS	&trans	&trans	&trans
+			>;
+		};
+		l_left_compact_keys {
+			bindings = <
+&kp N1	&kp N2	&kp N3	&kp N4	&kp N5					&trans	&trans	&trans	&trans	&trans
+&kp N6	&kp N7	&kp N8	&kp N9	&kp N0					&trans	&trans	&trans	&trans	&trans
+&trans	&kp F1	&kp F2	&kp F3	&kp F4					&trans	&trans	&trans	&trans	&trans
+						&trans	&trans	&trans	&trans	&trans	&trans
 			>;
 		};
 	};
