@@ -57,7 +57,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		compatible = "zmk,combos";
 		toggle_left_compact {
 			timeout-ms = <50>;
-			key-positions = <5 6 7 8>;
+			key-positions = <10 11 12 13>;
 			bindings = <&tog LEFT_COMPACT>;
 		};
 	};
