@@ -36,6 +36,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 #define WIN_UNI 7
 #define LEFT_COMPACT 8
 #define LEFT_COMPACT_KEYS 9
+#define LEFT_COMPACT_NUM 10
 
 / {
 	conditional_layers {
@@ -47,6 +48,17 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		meta_layer {
 			if-layers = <SYM NAV>;
 			then-layer = <META>;
+		};
+	};
+};
+
+/ {
+	combos {
+		compatible = "zmk,combos";
+		toggle_left_compact {
+			timeout-ms = <50>;
+			key-positions = <5 6 7 8>;
+			bindings = <&tog LEFT_COMPACT>;
 		};
 	};
 };
@@ -165,7 +177,15 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		};
 		l_left_compact_keys {
 			bindings = <
-&kp N0	&kp N6	&kp N7	&kp N8	&kp N9					&trans	&trans	&trans	&trans	&trans
+&kp BSPC	&kp Y	&kp U	&kp L		&kp J									&trans	&trans	&trans	&trans	&trans
+&kp O		&kp I	&kp E	&kp N		&kp M									&trans	&trans	&trans	&trans	&trans
+&kp LALT	&kp Q	&kp Z	&kp H		&kp K									&trans	&trans	&trans	&trans	&trans
+							&kp SPACE	&mo LEFT_COMPACT_NUM	&trans	&trans	&trans	&trans
+			>;
+		};
+		l_left_compact_num {
+			bindings = <
+&kp N6	&kp N7	&kp N8	&kp N9	&kp N0					&trans	&trans	&trans	&trans	&trans
 &kp N1	&kp N2	&kp N3	&kp N4	&kp N5					&trans	&trans	&trans	&trans	&trans
 &trans	&kp F1	&kp F2	&kp F3	&kp F4					&trans	&trans	&trans	&trans	&trans
 						&trans	&trans	&trans	&trans	&trans	&trans
