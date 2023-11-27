@@ -57,7 +57,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		compatible = "zmk,combos";
 		toggle_left_compact {
 			timeout-ms = <50>;
-			key-positions = <10 11 12 13>;
+			key-positions = <10 13 31>;
 			bindings = <&tog LEFT_COMPACT>;
 		};
 	};
@@ -80,6 +80,13 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 			bindings = <&esctab>, <&kp ESC>;
 			mods = <(MOD_LCTL)>;
 			keep-mods = <(MOD_LCTL)>;
+		};
+		layerleft: layer_left {
+			compatible = "zmk,behavior-mod-morph";
+			label = "shift_extra";
+			#binding-cells = <0>;
+			bindings = <&mo LEFT_COMPACT_KEYS>, <&mo LEFT_COMPACT_NUM>;
+			mods = <(MOD_LSFT)>;
 		};
 		gqt: global-quick-tap {
 			compatible = "zmk,behavior-hold-tap";
@@ -169,10 +176,10 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		};
 		l_left_compact {
 			bindings = <
-&trans	&trans	&trans	&trans	&trans									&trans	&trans	&trans	&trans	&trans
-&trans	&trans	&trans	&trans	&trans									&trans	&trans	&trans	&trans	&trans
-&trans	&trans	&trans	&trans	&trans									&trans	&trans	&trans	&trans	&trans
-						&trans	&trans	&mo LEFT_COMPACT_KEYS	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans						&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans						&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans						&trans	&trans	&trans	&trans	&trans
+						&trans	&trans	&layerleft	&trans	&trans	&trans
 			>;
 		};
 		l_left_compact_keys {
