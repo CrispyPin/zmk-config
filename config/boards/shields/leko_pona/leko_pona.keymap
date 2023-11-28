@@ -57,7 +57,7 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		compatible = "zmk,combos";
 		toggle_left_compact {
 			timeout-ms = <50>;
-			key-positions = <10 13 31>;
+			key-positions = <2 3>;
 			bindings = <&tog LEFT_COMPACT>;
 		};
 	};
@@ -106,10 +106,10 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		compatible = "zmk,keymap";
 		l_base {
 			bindings = <
-&escape		&kp W	&kp F	&kp P			&kp B							&kp J	&kp L	&kp U	&kp Y	&kp BACKSPACE
-&kp A		&kp R	&kp S	&kp T			&kp G							&kp M	&kp N	&kp E	&kp I	&kp O
-&kp LCTRL	&kp X	&kp C	&kp D			&kp V							&kp K	&kp H	&kp Z	&kp Q	&kp LALT
-							&gqt LALT SPACE	&kp LSHIFT	&kp LWIN	&mo NAV	&mo SYM	&kp RET
+&escape		&kp W	&kp F	&kp P		&kp B							&kp J	&kp L	&kp U	&kp Y	&kp BACKSPACE
+&kp A		&kp R	&kp S	&kp T		&kp G							&kp M	&kp N	&kp E	&kp I	&kp O
+&kp LCTRL	&kp X	&kp C	&kp D		&kp V							&kp K	&kp H	&kp Z	&kp Q	&kp LALT
+							&kp SPACE	&kp LSHIFT	&kp LWIN	&mo NAV	&mo SYM	&kp RET
 			>;
 		};
 		// numbers + symbols + non english letters
