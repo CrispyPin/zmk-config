@@ -11,6 +11,8 @@ ZMK_UNICODE_PAIR(lin_ao, N0, N0, E, N5, N0, N0, C, N5)
 ZMK_UNICODE_PAIR(lin_oe, N0, N0, F, N6, N0, N0, D, N6)
 ZMK_UNICODE_PAIR(lin_euro, N2, N0, A, C, N0, N0, B, N0) // euro sign and degree symbol
 ZMK_UNICODE_PAIR(lin_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
+ZMK_UNICODE_PAIR(lin_dot, N2, N5, C, F, N2, N5, C, F) // ●
+
 
 // switch to Windows-mode (using WinCompose)
 #undef OS_UNICODE_LEAD
@@ -23,6 +25,7 @@ ZMK_UNICODE_PAIR(win_ao, N0, N0, E, N5, N0, N0, C, N5)
 ZMK_UNICODE_PAIR(win_oe, N0, N0, F, N6, N0, N0, D, N6)
 ZMK_UNICODE_PAIR(win_euro, N2, N0, A, C, N0, N0, B, N0) // euro sign and degree symbol
 ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
+ZMK_UNICODE_PAIR(win_dot, N2, N5, C, F, N2, N5, C, F) // ●
 
 
 
@@ -37,6 +40,8 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 #define LEFT_COMPACT 8
 #define LEFT_COMPACT_KEYS 9
 #define LEFT_COMPACT_NUM 10
+#define PASSWORD_MODE 11
+#define PASSWORD_WINDOWS 12
 
 / {
 	conditional_layers {
@@ -44,6 +49,10 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 		windows_unicode {
 			if-layers = <SYM WINDOWS>;
 			then-layer = <WIN_UNI>;
+		};
+		windows_password {
+			if-layers = <PASSWORD_MODE WINDOWS>;
+			then-layer = <PASSWORD_WINDOWS>;
 		};
 		meta_layer {
 			if-layers = <SYM NAV>;
@@ -59,6 +68,11 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 			timeout-ms = <50>;
 			key-positions = <2 3>;
 			bindings = <&tog LEFT_COMPACT>;
+		};
+		toggle_password_mode {
+			timeout-ms = <50>;
+			key-positions = <0 4 5 9>;
+			bindings = <&tog PASSWORD_MODE>;
 		};
 	};
 };
@@ -198,5 +212,22 @@ ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
 						&trans	&trans	&trans	&trans	&trans	&trans
 			>;
 		};
+		l_password_mode {
+			bindings = <
+&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot							&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot
+&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot							&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot
+&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot							&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot
+									&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot
+			>;
+		};
+		l_password_mode_windows {
+			bindings = <
+&win_dot	&win_dot	&win_dot	&win_dot	&win_dot							&win_dot	&win_dot	&win_dot	&win_dot	&win_dot
+&win_dot	&win_dot	&win_dot	&win_dot	&win_dot							&win_dot	&win_dot	&win_dot	&win_dot	&win_dot
+&win_dot	&win_dot	&win_dot	&win_dot	&win_dot							&win_dot	&win_dot	&win_dot	&win_dot	&win_dot
+									&win_dot	&win_dot	&win_dot	&win_dot	&win_dot	&win_dot	&win_dot
+			>;
+		};
+
 	};
 };
