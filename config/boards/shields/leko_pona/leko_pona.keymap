@@ -6,13 +6,33 @@
 #include "../../../../zmk-nodefree-config/helper.h"
 
 
-ZMK_UNICODE_PAIR(lin_ae, N0, N0, E, N4, N0, N0, C, N4)
-ZMK_UNICODE_PAIR(lin_ao, N0, N0, E, N5, N0, N0, C, N5)
-ZMK_UNICODE_PAIR(lin_oe, N0, N0, F, N6, N0, N0, D, N6)
-ZMK_UNICODE_PAIR(lin_euro, N2, N0, A, C, N0, N0, B, N0) // euro sign and degree symbol
-ZMK_UNICODE_PAIR(lin_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
-ZMK_UNICODE_PAIR(lin_dot, N2, N5, C, F, N2, N5, C, F) // ●
-
+ZMK_UNICODE_PAIR(L_ae, N0, N0, E, N4, N0, N0, C, N4) // åÅ
+ZMK_UNICODE_PAIR(L_ao, N0, N0, E, N5, N0, N0, C, N5) // äÄ
+ZMK_UNICODE_PAIR(L_oe, N0, N0, F, N6, N0, N0, D, N6) // öÖ
+ZMK_UNICODE_PAIR(L_euro,    N2, N0, A,  C, N0, N0, B, N0) // euro sign and degree symbol €, °
+ZMK_UNICODE_PAIR(L_multi_o, A , N6, N6, E, F,  F,  F, D ) // multiocular o, unicode error ꙮ, �
+// box parts
+ZMK_UNICODE_SINGLE(L_box_rd,   N2, N5, N0, F ) // ┏
+ZMK_UNICODE_SINGLE(L_box_rdl,  N2, N5, N3, N3) // ┳
+ZMK_UNICODE_SINGLE(L_box_dl,   N2, N5, N1, N3) // ┓
+ZMK_UNICODE_SINGLE(L_box_urd,  N2, N5, N2, N3) // ┣
+ZMK_UNICODE_SINGLE(L_box_urdl, N2, N5, N4, B ) // ╋
+ZMK_UNICODE_SINGLE(L_box_udl,  N2, N5, N2, B ) // ┫
+ZMK_UNICODE_SINGLE(L_box_ur,   N2, N5, N1, N7) // ┗
+ZMK_UNICODE_SINGLE(L_box_url,  N2, N5, N3, B ) // ┻
+ZMK_UNICODE_SINGLE(L_box_ul,   N2, N5, N1, B ) // ┛
+ZMK_UNICODE_SINGLE(L_box_h,    N2, N5, N0, N1) // ━
+ZMK_UNICODE_SINGLE(L_box_v,    N2, N5, N0, N3) // ┃
+ZMK_UNICODE_SINGLE(L_box_spc,  N3, N0, N0, N0) // '　'
+// blocks
+ZMK_UNICODE_SINGLE(L_block_u, N2, N5, N8, N0) // ▀
+ZMK_UNICODE_SINGLE(L_block_d, N2, N5, N8, N4) // ▄
+ZMK_UNICODE_SINGLE(L_block  , N2, N5, N8, N8) // █
+// arrows
+ZMK_UNICODE_SINGLE(L_arr_l, N2, N1, N9, N0) // ←
+ZMK_UNICODE_SINGLE(L_arr_u, N2, N1, N9, N1) // ↑
+ZMK_UNICODE_SINGLE(L_arr_r, N2, N1, N9, N2) // →
+ZMK_UNICODE_SINGLE(L_arr_d, N2, N1, N9, N3) // ↓
 
 // switch to Windows-mode (using WinCompose)
 #undef OS_UNICODE_LEAD
@@ -20,12 +40,33 @@ ZMK_UNICODE_PAIR(lin_dot, N2, N5, C, F, N2, N5, C, F) // ●
 #define OS_UNICODE_LEAD &macro_tap &kp RALT &kp U  // WinCompose sequence
 #define OS_UNICODE_TRAIL &macro_tap &kp RET
 
-ZMK_UNICODE_PAIR(win_ae, N0, N0, E, N4, N0, N0, C, N4)
-ZMK_UNICODE_PAIR(win_ao, N0, N0, E, N5, N0, N0, C, N5)
-ZMK_UNICODE_PAIR(win_oe, N0, N0, F, N6, N0, N0, D, N6)
-ZMK_UNICODE_PAIR(win_euro, N2, N0, A, C, N0, N0, B, N0) // euro sign and degree symbol
-ZMK_UNICODE_PAIR(win_multi_o, A, N6, N6, E, F, F, F, D) // multiocular o
-ZMK_UNICODE_PAIR(win_dot, N2, N5, C, F, N2, N5, C, F) // ●
+ZMK_UNICODE_PAIR(W_ae, N0, N0, E, N4, N0, N0, C, N4)
+ZMK_UNICODE_PAIR(W_ao, N0, N0, E, N5, N0, N0, C, N5)
+ZMK_UNICODE_PAIR(W_oe, N0, N0, F, N6, N0, N0, D, N6)
+ZMK_UNICODE_PAIR(W_euro,    N2, N0, A,  C, N0, N0, B, N0) // euro sign and degree symbol
+ZMK_UNICODE_PAIR(W_multi_o, A,  N6, N6, E, F,  F,  F, D ) // multiocular o
+// box parts
+ZMK_UNICODE_SINGLE(W_box_rd,   N2, N5, N0, F ) // ┏
+ZMK_UNICODE_SINGLE(W_box_rdl,  N2, N5, N3, N3) // ┳
+ZMK_UNICODE_SINGLE(W_box_dl,   N2, N5, N1, N3) // ┓
+ZMK_UNICODE_SINGLE(W_box_urd,  N2, N5, N2, N3) // ┣
+ZMK_UNICODE_SINGLE(W_box_urdl, N2, N5, N4, B ) // ╋
+ZMK_UNICODE_SINGLE(W_box_udl,  N2, N5, N2, B ) // ┫
+ZMK_UNICODE_SINGLE(W_box_ur,   N2, N5, N1, N7) // ┗
+ZMK_UNICODE_SINGLE(W_box_url,  N2, N5, N3, B ) // ┻
+ZMK_UNICODE_SINGLE(W_box_ul,   N2, N5, N1, B ) // ┛
+ZMK_UNICODE_SINGLE(W_box_h,    N2, N5, N0, N1) // ━
+ZMK_UNICODE_SINGLE(W_box_v,    N2, N5, N0, N3) // ┃
+ZMK_UNICODE_SINGLE(W_box_spc,  N3, N0, N0, N0) // '　'
+// blocks
+ZMK_UNICODE_SINGLE(W_block_u, N2, N5, N8, N0) // ▀
+ZMK_UNICODE_SINGLE(W_block_d, N2, N5, N8, N4) // ▄
+ZMK_UNICODE_SINGLE(W_block  , N2, N5, N8, N8) // █
+// arrows
+ZMK_UNICODE_SINGLE(W_arr_l, N2, N1, N9, N0) // ←
+ZMK_UNICODE_SINGLE(W_arr_u, N2, N1, N9, N1) // ↑
+ZMK_UNICODE_SINGLE(W_arr_r, N2, N1, N9, N2) // →
+ZMK_UNICODE_SINGLE(W_arr_d, N2, N1, N9, N3) // ↓
 
 
 
@@ -36,23 +77,23 @@ ZMK_UNICODE_PAIR(win_dot, N2, N5, C, F, N2, N5, C, F) // ●
 #define TOKI 4
 #define GAME 5
 #define WINDOWS 6
-#define WIN_UNI 7
+#define W_UNI 7
 #define LEFT_COMPACT 8
 #define LEFT_COMPACT_KEYS 9
 #define LEFT_COMPACT_NUM 10
-#define PASSWORD_MODE 11
-#define PASSWORD_WINDOWS 12
+#define EXTRA_UNICODE 11
+#define EXTRA_UNICODE_WINDOWS 12
 
 / {
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
 		windows_unicode {
 			if-layers = <SYM WINDOWS>;
-			then-layer = <WIN_UNI>;
+			then-layer = <W_UNI>;
 		};
 		windows_password {
-			if-layers = <PASSWORD_MODE WINDOWS>;
-			then-layer = <PASSWORD_WINDOWS>;
+			if-layers = <EXTRA_UNICODE WINDOWS>;
+			then-layer = <EXTRA_UNICODE_WINDOWS>;
 		};
 		meta_layer {
 			if-layers = <SYM NAV>;
@@ -68,11 +109,6 @@ ZMK_UNICODE_PAIR(win_dot, N2, N5, C, F, N2, N5, C, F) // ●
 			timeout-ms = <50>;
 			key-positions = <2 3>;
 			bindings = <&tog LEFT_COMPACT>;
-		};
-		toggle_password_mode {
-			timeout-ms = <50>;
-			key-positions = <0 4 5 9>;
-			bindings = <&tog PASSWORD_MODE>;
 		};
 	};
 };
@@ -129,7 +165,7 @@ ZMK_UNICODE_PAIR(win_dot, N2, N5, C, F, N2, N5, C, F) // ●
 		// numbers + symbols + non english letters
 		l_sym {
 			bindings = <
-&kp TAB	&kp GRAVE	&kp LBKT	&kp RBKT	&lin_euro							&lin_multi_o	&lin_ao		&lin_ae		&lin_oe	&kp DEL
+&kp TAB	&kp GRAVE	&kp LBKT	&kp RBKT	&L_euro							&L_multi_o	&L_ao		&L_ae		&L_oe	&kp DEL
 &kp N1	&kp N2		&kp N3		&kp N4		&kp N5								&kp N6			&kp N7		&kp N8		&kp N9	&kp N0
 &trans	&kp SQT		&kp SLASH	&kp BSLH	&kp EQUAL							&kp MINUS		&kp SEMI	&kp COMMA	&kp DOT	&trans
 								&trans		&trans		&trans			&trans	&trans			&trans
@@ -148,7 +184,7 @@ ZMK_UNICODE_PAIR(win_dot, N2, N5, C, F, N2, N5, C, F) // ●
 		l_meta {
 			bindings = <
 &kp C_VOL_DN	&kp C_VOL_UP	&tog WINDOWS		&tog GAME	&tog TOKI					&kp KP_MULTIPLY	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_PLUS
-&kp C_PREV		&kp C_NEXT		&tog LEFT_COMPACT	&kp C_PLAY	&none						&kp KP_DIVIDE	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp KP_N0
+&kp C_PREV		&kp C_NEXT		&tog LEFT_COMPACT	&kp C_PLAY	&tog EXTRA_UNICODE			&kp KP_DIVIDE	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp KP_N0
 &trans			&none			&bt BT_SEL 0		&bt BT_NXT	&bt BT_CLR					&kp KP_DOT		&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_MINUS
 													&trans		&trans		&trans	&trans	&trans			&kp KP_ENTER
 			>;
@@ -180,9 +216,9 @@ ZMK_UNICODE_PAIR(win_dot, N2, N5, C, F, N2, N5, C, F) // ●
 						&trans	&trans	&trans		&trans	&trans	&trans
 			>;
 		};
-		l_win_unicode {
+		l_W_unicode {
 			bindings = <
-&trans	&trans	&trans	&trans	&win_euro					&win_multi_o	&win_ao	&win_ae	&win_oe	&trans
+&trans	&trans	&trans	&trans	&W_euro					&W_multi_o	&W_ao	&W_ae	&W_oe	&trans
 &trans	&trans	&trans	&trans	&trans						&trans			&trans	&trans	&trans	&trans
 &trans	&trans	&trans	&trans	&trans						&trans			&trans	&trans	&trans	&trans
 						&trans	&trans	&trans		&trans	&trans			&trans
@@ -212,20 +248,20 @@ ZMK_UNICODE_PAIR(win_dot, N2, N5, C, F, N2, N5, C, F) // ●
 						&trans	&trans	&trans	&trans	&trans	&trans
 			>;
 		};
-		l_password_mode {
+		l_extra_unicode {
 			bindings = <
-&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot							&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot
-&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot							&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot
-&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot							&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot
-									&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot	&lin_dot
+&none		&L_arr_u	&none		&L_block_u	&none								&L_box_spc	&L_box_rd	&L_box_rdl	&L_box_dl	&none
+&L_arr_l	&L_arr_d	&L_arr_r	&L_block	&none								&L_box_v	&L_box_urd	&L_box_urdl	&L_box_udl	&none
+&none		&none		&none		&L_block_d	&none								&L_box_h	&L_box_ur	&L_box_url	&L_box_ul	&none
+									&kp SPACE	&none	&tog EXTRA_UNICODE	&none	&none		&none		&none
 			>;
 		};
-		l_password_mode_windows {
+		l_extra_unicode_windows {
 			bindings = <
-&win_dot	&win_dot	&win_dot	&win_dot	&win_dot							&win_dot	&win_dot	&win_dot	&win_dot	&win_dot
-&win_dot	&win_dot	&win_dot	&win_dot	&win_dot							&win_dot	&win_dot	&win_dot	&win_dot	&win_dot
-&win_dot	&win_dot	&win_dot	&win_dot	&win_dot							&win_dot	&win_dot	&win_dot	&win_dot	&win_dot
-									&win_dot	&win_dot	&win_dot	&win_dot	&win_dot	&win_dot	&win_dot
+&none		&W_arr_u	&none		&W_block_u	&none								&W_box_spc	&W_box_rd	&W_box_rdl	&W_box_dl	&none
+&W_arr_l	&W_arr_d	&W_arr_r	&W_block	&none								&W_box_v	&W_box_urd	&W_box_urdl	&W_box_udl	&none
+&none		&none		&none		&W_block_d	&none								&W_box_h	&W_box_ur	&W_box_url	&W_box_ul	&none
+									&kp SPACE	&none	&tog EXTRA_UNICODE	&none	&none		&none		&none
 			>;
 		};
 
