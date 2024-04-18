@@ -10,7 +10,8 @@ ZMK_UNICODE_PAIR(L_ae, N0, N0, E, N4, N0, N0, C, N4) // åÅ
 ZMK_UNICODE_PAIR(L_ao, N0, N0, E, N5, N0, N0, C, N5) // äÄ
 ZMK_UNICODE_PAIR(L_oe, N0, N0, F, N6, N0, N0, D, N6) // öÖ
 ZMK_UNICODE_PAIR(L_euro,    N2, N0, A,  C, N0, N0, B, N0) // euro sign and degree symbol €, °
-ZMK_UNICODE_PAIR(L_multi_o, A , N6, N6, E, F,  F,  F, D ) // multiocular o, unicode error ꙮ, �
+ZMK_UNICODE_PAIR(L_multi_o, A,  N6, N6, E, F,  F,  F, D ) // multiocular o, unicode error ꙮ, �
+ZMK_UNICODE_PAIR(L_micro,   N0, N0, B, N5, N0, N0,  B, N7 ) // µ, ·
 // box parts
 ZMK_UNICODE_SINGLE(L_box_rd,   N2, N5, N0, F ) // ┏
 ZMK_UNICODE_SINGLE(L_box_rdl,  N2, N5, N3, N3) // ┳
@@ -45,6 +46,7 @@ ZMK_UNICODE_PAIR(W_ao, N0, N0, E, N5, N0, N0, C, N5)
 ZMK_UNICODE_PAIR(W_oe, N0, N0, F, N6, N0, N0, D, N6)
 ZMK_UNICODE_PAIR(W_euro,    N2, N0, A,  C, N0, N0, B, N0) // euro sign and degree symbol
 ZMK_UNICODE_PAIR(W_multi_o, A,  N6, N6, E, F,  F,  F, D ) // multiocular o
+ZMK_UNICODE_PAIR(W_micro,   N0, N0, B, N5, N0, N0,  B, N7 ) // µ, ·
 // box parts
 ZMK_UNICODE_SINGLE(W_box_rd,   N2, N5, N0, F ) // ┏
 ZMK_UNICODE_SINGLE(W_box_rdl,  N2, N5, N3, N3) // ┳
@@ -250,18 +252,18 @@ ZMK_UNICODE_SINGLE(W_arr_d, N2, N1, N9, N3) // ↓
 		};
 		l_extra_unicode {
 			bindings = <
-&trans		&L_arr_u	&none		&L_block_u	&none								&L_box_spc	&L_box_rd	&L_box_rdl	&L_box_dl	&trans
-&L_arr_l	&L_arr_d	&L_arr_r	&L_block	&none								&L_box_v	&L_box_urd	&L_box_urdl	&L_box_udl	&none
-&trans		&none		&none		&L_block_d	&none								&L_box_h	&L_box_ur	&L_box_url	&L_box_ul	&trans
-									&kp SPACE	&trans	&tog EXTRA_UNICODE	&none	&none		&none		&trans
+&trans	&none		&L_arr_u	&L_micro	&L_block_u								&L_box_spc	&L_box_rd	&L_box_rdl	&L_box_dl	&trans
+&none	&L_arr_l	&L_arr_d	&L_arr_r	&L_block								&L_box_v	&L_box_urd	&L_box_urdl	&L_box_udl	&none
+&trans	&none		&none		&none		&L_block_d								&L_box_h	&L_box_ur	&L_box_url	&L_box_ul	&trans
+								&kp SPACE	&trans		&tog EXTRA_UNICODE	&none	&none		&trans
 			>;
 		};
 		l_extra_unicode_windows {
 			bindings = <
-&trans		&W_arr_u	&none		&W_block_u	&none								&W_box_spc	&W_box_rd	&W_box_rdl	&W_box_dl	&trans
-&W_arr_l	&W_arr_d	&W_arr_r	&W_block	&none								&W_box_v	&W_box_urd	&W_box_urdl	&W_box_udl	&none
-&trans		&none		&none		&W_block_d	&none								&W_box_h	&W_box_ur	&W_box_url	&W_box_ul	&trans
-									&kp SPACE	&trans	&tog EXTRA_UNICODE	&none	&none		&none		&trans
+&trans	&none		&W_arr_u	&W_micro	&W_block_u								&W_box_spc	&W_box_rd	&W_box_rdl	&W_box_dl	&trans
+&none	&W_arr_l	&W_arr_d	&W_arr_r	&W_block								&W_box_v	&W_box_urd	&W_box_urdl	&W_box_udl	&none
+&trans	&none		&none		&none		&W_block_d								&W_box_h	&W_box_ur	&W_box_url	&W_box_ul	&trans
+								&kp SPACE	&trans		&tog EXTRA_UNICODE	&none	&none		&trans
 			>;
 		};
 
