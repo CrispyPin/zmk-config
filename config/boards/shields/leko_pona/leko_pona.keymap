@@ -250,18 +250,18 @@ ZMK_UNICODE_SINGLE(W_arr_d, N2, N1, N9, N3) // ↓
 		};
 		l_extra_unicode {
 			bindings = <
-&none		&L_arr_u	&none		&L_block_u	&none								&L_box_spc	&L_box_rd	&L_box_rdl	&L_box_dl	&none
+&trans		&L_arr_u	&none		&L_block_u	&none								&L_box_spc	&L_box_rd	&L_box_rdl	&L_box_dl	&trans
 &L_arr_l	&L_arr_d	&L_arr_r	&L_block	&none								&L_box_v	&L_box_urd	&L_box_urdl	&L_box_udl	&none
-&none		&none		&none		&L_block_d	&none								&L_box_h	&L_box_ur	&L_box_url	&L_box_ul	&none
-									&kp SPACE	&none	&tog EXTRA_UNICODE	&none	&none		&none		&none
+&trans		&none		&none		&L_block_d	&none								&L_box_h	&L_box_ur	&L_box_url	&L_box_ul	&trans
+									&kp SPACE	&trans	&tog EXTRA_UNICODE	&none	&none		&none		&trans
 			>;
 		};
 		l_extra_unicode_windows {
 			bindings = <
-&none		&W_arr_u	&none		&W_block_u	&none								&W_box_spc	&W_box_rd	&W_box_rdl	&W_box_dl	&none
+&trans		&W_arr_u	&none		&W_block_u	&none								&W_box_spc	&W_box_rd	&W_box_rdl	&W_box_dl	&trans
 &W_arr_l	&W_arr_d	&W_arr_r	&W_block	&none								&W_box_v	&W_box_urd	&W_box_urdl	&W_box_udl	&none
-&none		&none		&none		&W_block_d	&none								&W_box_h	&W_box_ur	&W_box_url	&W_box_ul	&none
-									&kp SPACE	&none	&tog EXTRA_UNICODE	&none	&none		&none		&none
+&trans		&none		&none		&W_block_d	&none								&W_box_h	&W_box_ur	&W_box_url	&W_box_ul	&trans
+									&kp SPACE	&trans	&tog EXTRA_UNICODE	&none	&none		&none		&trans
 			>;
 		};
 
